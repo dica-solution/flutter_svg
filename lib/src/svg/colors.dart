@@ -131,7 +131,7 @@ Color parseColor(String colorString) {
   }
 
   // handle named colors ('red', 'green', etc.).
-  final Color namedColor = _namedColors[colorString];
+  final Color namedColor = _namedColors[colorString] ?? _namedColors['black'];
   if (namedColor != null) {
     return namedColor;
   }
